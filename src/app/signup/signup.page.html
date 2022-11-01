@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<h1>Sign up</h1>
+<div id="header">
+<form id="form">
+
+  <div class="text1">
+    <ion-label  color="light" >Username</ion-label>
+  </div>
+
+<ion-item class="username">
+  <ion-input name="username" type="text" ngModel required></ion-input>
+</ion-item>
+
+<div class="text1">
+  <ion-label  color="light" >Email</ion-label>
+</div>
+
+<ion-item class="email">
+  <ion-input name="email" type="email" pattern="[a-z0-9._]+@[a-z0-9.-]+.[a-z]"
+  ngModel required></ion-input>
+</ion-item>
+
+<div class="text1">
+  <ion-label color="light" position="stacked">password</ion-label>
+</div>
+
+<ion-item class="password1">
+  <ion-input name="password"  [type]="showPassword ? 'text': 'password'" ngModel required></ion-input>
+</ion-item>
+
+
+  <div class="text1">
+  <ion-label color="light" position="stacked">Confirm password</ion-label>
+  </div>
+
+    <ion-item class="password1">
+      <ion-input   name="password"  [type]="showPassword ? 'text': 'password'" ngModel required></ion-input>
+    </ion-item>
+
+
+    <ion-button color="secondary"  expand="block" type="sumbit" shape="round" color="success" (click)="gotologin1()">Sign Up</ion-button>
+
+
+
+
+
+</form>
+</div>
+
+</ion-content>

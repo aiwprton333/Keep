@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+  <div class="flex-center1"><h1>Keep</h1><img src="assets/ei_lock.png">
+  </div>
+
+<form id="form">
+
+
+  <div class="text1">
+  <ion-label  color="light"  position="stacked">Username or Email</ion-label>
+  </div>
+
+  <ion-item class="Usernameemail">
+   <ion-input   name="UsernameorEmail" type="text" ngModel required></ion-input>
+</ion-item>
+
+
+<div class="text1">
+  <ion-label color="light" position="stacked">password</ion-label>
+</div>
+
+  <ion-item class="password1">
+    <ion-input name="password"  [type]="showPassword ? 'text': 'password'" ngModel required></ion-input>
+    </ion-item>
+
+
+
+
+
+  <ion-button color="secondary"  expand="block" type="sumbit" shape="round" color="success" (click)="menu()" >Sign in</ion-button>
+
+<div class="text2">
+  <ion-grid>
+    <a [routerLink]="['/Signup']">Sign up </a>
+
+  </ion-grid>
+
+  <ion-grid>
+    <a [routerLink]="['/forgetpassword']">Forgot Password?</a>
+  </ion-grid>
+</div>
+
+
+
+
+
+
+
+
+
+</form>
+</div>
+
+
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "Appkeep",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
