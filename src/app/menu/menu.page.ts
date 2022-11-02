@@ -15,5 +15,8 @@ export class MenuPage implements OnInit {
   gotoPhotosPage(){
     this.navCtrl.navigateForward('photos');
   }
+  gotovideo() {
+    this.navCtrl.navigateForward('video');
+  }
 
 }
