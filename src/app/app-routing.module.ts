@@ -38,7 +38,11 @@ const routes: Routes = [
   {
     path: 'video',
     loadChildren: () => import('./video/video.module').then( m => m.VideoPageModule)
+  },  {
+    path: 'upload-photos',
+    loadChildren: () => import('./upload-photos/upload-photos.module').then( m => m.UploadPhotosPageModule)
   },
+
 
 
 ];

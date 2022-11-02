@@ -1,0 +1,36 @@
+
+ion-content{
+  --background: #1BAC4B;
+  position: relative;
+}
+.back{
+  position: absolute;
+  top: 5%;
+  left:0;
+  height: 30px;
+  width: 30px;
+  color: #fff;
+}
+.header{
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  padding-top: 30px;
+  transform: translate(-50%, -50%);
+  color: #fff;
+
+}
+
+.box{
+  height: 88vh;
+  width: 100%;
+  max-width: 500px;
+  position: fixed;
+  background: #fff;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
