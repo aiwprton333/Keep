@@ -6,6 +6,18 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./photos.page.scss'],
 })
 export class PhotosPage implements OnInit {
+  items = [
+    {
+      title: 'Create Album',
+      icon: 'folder'
+    },
+    {
+       title: 'Import Photos',
+      icon: 'image'
+    }
+  ];
+  someFunction(item) {
+  }
 
   constructor(private navCtrl: NavController) { }
 
