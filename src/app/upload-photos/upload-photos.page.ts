@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-upload-photos',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadPhotosPage implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
   }
-
+  gotoPhotos() {
+    this.navCtrl.navigateRoot('photos');
+  }
 }

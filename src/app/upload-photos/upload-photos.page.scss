@@ -34,3 +34,27 @@ ion-content{
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
+
+.selectAll{
+  position: absolute;
+  right: 0;
+  padding-right: 40px;
+  top: 2.5%;
+  ion-label{
+    padding-right: 7px;
+  }
+  ion-checkbox{
+    position: absolute;
+  }
+}
+ion-button{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-top: 25px;
+  height: 40px;
+  width: 130px;
+  text-transform: initial;
+ }
+
+
