@@ -15,4 +15,7 @@ export class UploadPhotosPage implements OnInit {
   gotoPhotos() {
     this.navCtrl.navigateRoot('photos');
   }
+  gotoUploadPhotos(){
+    this.navCtrl.navigateRoot('file-upload');
+  }
 }

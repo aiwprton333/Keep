@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MenuPageRoutingModule } from './menu-routing.module';
+import { Tap1PageRoutingModule } from './tap1-routing.module';
 
-import { MenuPage } from './menu.page';
+import { Tap1Page } from './tap1.page';
 
 import { ComponentsModule } from './../components/components.module';
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentsModule } from './../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    MenuPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    Tap1PageRoutingModule
   ],
-  declarations: [MenuPage]
+  declarations: [Tap1Page]
 })
-export class MenuPageModule {}
+export class Tap1PageModule {}

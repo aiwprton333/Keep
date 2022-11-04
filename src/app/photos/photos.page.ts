@@ -13,12 +13,12 @@ export class PhotosPage implements OnInit {
     },
     {
        title: 'Upload Photos',
-      icon: 'image'
+       icon: 'image'
     }
   ];
   someFunction(item) {
     if(item.title === 'Upload Photos'){
-        this.navCtrl.navigateRoot('upload-photos');
+        this.navCtrl.navigateRoot('photo-upload');
     }
   }
 

@@ -1,30 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
-
+import { FirebaseAuthService } from './../services/firebase-auth.service';
+import { CommonModule } from '@angular/common';
+import { Component, NgModule, OnInit } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
+import { LoginRoutingModule } from './login-routing.module';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-
-export class LoginPage implements OnInit {
-  showPassword = false;
-  passwordToggleIcon = 'eye';
-
-  constructor(private navCtrl: NavController) { }
-  togglePassword(): void{
-    this.showPassword = !this.showPassword;
-    if (this.passwordToggleIcon === 'eye') {
-      this.passwordToggleIcon = 'eye-off';
-    } else {
-      this.passwordToggleIcon = 'eye';
+export class LoginPage implements OnInit{
+    constructor(public firebaseAuthService: FirebaseAuthService){
     }
-}
-  ngOnInit() {
-  }
-  menu() {
-    this.navCtrl.navigateForward('menu');
-  }
-
+    ngOnInit(){}
 }

@@ -1,10 +1,13 @@
+import { LoginGuard } from './guards/login.guard';
+import { AuthGuard } from './guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: '',
@@ -21,7 +24,8 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./login/login.module').then( m => m.LoginModule),
+    canActivate: [LoginGuard]
   },
   {
     path: 'setnewpassword',
@@ -38,17 +42,23 @@ const routes: Routes = [
   {
     path: 'video',
     loadChildren: () => import('./video/video.module').then( m => m.VideoPageModule)
-  },  {
+  },
+  {
     path: 'upload-photos',
     loadChildren: () => import('./upload-photos/upload-photos.module').then( m => m.UploadPhotosPageModule)
   },
   {
-    path: 'coud-list',
-    loadChildren: () => import('./coud-list/coud-list.module').then( m => m.CoudListPageModule)
+    path: 'tap1',
+    loadChildren: () => import('./tap1/tap1.module').then( m => m.Tap1PageModule)
   },
-
-
-
+  {
+    path: 'photo-upload',
+    loadChildren: () => import('./components/photo-upload/photo-upload-routing.module').then( m => m.PhotoUploadComponentRoutingModule)
+  },
+  {
+    path: 'photos-list',
+    loadChildren: () => import('./components/photos-list/photos-list-routing.module').then( m => m.PhotosListComponentRoutingModule)
+  }
 ];
 
 @NgModule({

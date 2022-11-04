@@ -1,9 +1,10 @@
 <ion-header>
   <ion-toolbar>
-
+    <ion-card-title slot="start" >Hi: {{userProfileData?.displayName}}</ion-card-title>
     <ion-title></ion-title>
-     <div slot="end" style="padding-right: 10px ;"><ion-button color="danger" expand="block" class="buttonheader"> Log out</ion-button></div>
-  </ion-toolbar>
+     <!-- <div slot="end" style="padding-right: 10px ;"><ion-button color="danger" expand="block" class="buttonheader"> Log out</ion-button></div> -->
+     <ion-button color="danger" slot="end" (click)="logoutAction()" >Log out</ion-button>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
@@ -14,13 +15,13 @@
     <div style="color: white;">Menu: select what you want to keep</div>
 
 
-    <ion-button (click)="gotoPhotosPage()" color="light" expand="block"  ><div class="pic1"><img src="assets/photo.png"><div  style="padding: 0px 0px 0px 40px;">Photos</div>  </div></ion-button >
+    <ion-button class="box"  (click)="gotoPhotosPage()" color="light" expand="block"  ><div class="pic1"><img src="assets/photo.png"><div  style="padding: 0px 0px 0px 40px;">Photos</div>  </div></ion-button >
 
-    <ion-button (click)="gotovideo()" color="light"  expand="block"  ><div class="pic1"><img src="assets/video.png"><div style="padding: 0px 0px 0px 40px;">Videos</div>  </div></ion-button >
+    <ion-button class="box" (click)="gotovideo()" color="light"  expand="block"  ><div class="pic1"><img src="assets/video.png"><div style="padding: 0px 0px 0px 40px;">Videos</div>  </div></ion-button >
 
-    <ion-button color="light"  expand="block"  ><div class="pic1"><img src="assets/sound.png"><div style="padding: 0px 0px 0px 40px;">Sounds</div>  </div></ion-button >
+    <ion-button class="box"  (click)="photosList()" color="light"  expand="block"  ><div class="pic1"><img src="assets/sound.png"><div style="padding: 0px 0px 0px 40px;">Sounds</div>  </div></ion-button >
 
-    <ion-button color="light"  expand="block"  ><div class="pic1"><img src="assets/file.png"><div style="padding: 0px 0px 0px 40px;">Files</div>  </div></ion-button >
+    <ion-button class="box" (click)="photoUpload()" color="light"  expand="block"  ><div class="pic1"><img src="assets/file.png"><div style="padding: 0px 0px 0px 40px;">Files</div>  </div></ion-button >
 
   </div>
 
